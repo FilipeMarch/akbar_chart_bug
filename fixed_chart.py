@@ -1,7 +1,6 @@
 from kivy.lang import Builder
 from kivymd.app import MDApp
 from kivy.factory import Factory as F
-from kivy.uix.recycleview.views import RecycleDataViewBehavior
 from graphs import AKBarChart
 
 Builder.load_string("""
@@ -29,14 +28,8 @@ Builder.load_string("""
             default_size: None, dp(200)
 """)
 
-class Barchart(AKBarChart, RecycleDataViewBehavior):
-    x_values = F.ListProperty([1, 2, 3, 4, 5])
-    y_values = F.ListProperty([1, 2, 3, 4, 5])
-
-    def refresh_view_attrs(self, rv, index, data):
-        self.x_values = data['x_values']
-        self.y_values = data['y_values']
-        return super().refresh_view_attrs(rv, index, data)
+class Barchart(AKBarChart):
+    pass
 
 data = [
     {   
