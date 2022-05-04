@@ -2,7 +2,6 @@ from kivy.lang import Builder
 from kivymd.app import MDApp
 from kivy.factory import Factory as F
 from kivy.uix.recycleview.views import RecycleDataViewBehavior
-from icecream import ic
 from kivy.metrics import dp,sp
 from graphs import AKBarChart
 
