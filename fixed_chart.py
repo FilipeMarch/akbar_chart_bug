@@ -37,7 +37,6 @@ Builder.load_string("""
 class Barchart(AKBarChart, RecycleDataViewBehavior):
     x_values = F.ListProperty([1, 2, 3, 4, 5])
     y_values = F.ListProperty([1, 2, 3, 4, 5])
-    id = F.NumericProperty()
 
     def refresh_view_attrs(self, rv, index, data):
         self.x_values = data['x_values']
