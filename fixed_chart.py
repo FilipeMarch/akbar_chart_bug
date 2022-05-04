@@ -2,10 +2,7 @@ from kivy.lang import Builder
 from kivymd.app import MDApp
 from kivy.factory import Factory as F
 from kivy.uix.recycleview.views import RecycleDataViewBehavior
-from icecream import ic
-from kivy.metrics import dp,sp
 from graphs import AKBarChart
-
 
 Builder.load_string("""
 <Barchart>
@@ -19,9 +16,7 @@ Builder.load_string("""
     on_y_values: self.update()
 
 <ScreenOne>:
-    rv: rv.__self__
     RecycleView:
-        id: rv
         viewclass: 'Barchart'
         data: root.data
         RecycleBoxLayout:
